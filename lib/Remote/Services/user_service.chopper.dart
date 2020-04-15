@@ -24,6 +24,13 @@ class _$UserService extends UserService {
   }
 
   @override
+  Future<Response<List<dynamic>>> getAllSchedule() {
+    final $url = 'schedule';
+    final $request = Request('GET', $url, client.baseUrl);
+    return client.send<List<dynamic>, List<dynamic>>($request);
+  }
+
+  @override
   Future<Response<Map<String, dynamic>>> getCurrentUser() {
     final $url = 'user';
     final $request = Request('GET', $url, client.baseUrl);

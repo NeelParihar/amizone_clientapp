@@ -10,6 +10,9 @@ abstract class UserService extends ChopperService {
   @Get(path: "attendance")
   Future<Response<List<dynamic>>> getAllAttendance();
 
+  @Get(path: "schedule")
+  Future<Response<List<dynamic>>> getAllSchedule();
+
   @Get(path: "user")
   Future<Response<Map<String, dynamic>>> getCurrentUser();
 

@@ -48,7 +48,7 @@ class Dashborad extends StatelessWidget {
                               child: SizedBox(
                                 height: 200.0,
                                 child: ListView.builder(
-                                  itemExtent: 100.0,
+                                  
                                   itemCount: state.users.length,
                                   itemBuilder: (context, index) {
                                     Attendance user = state.users[index];
@@ -56,7 +56,7 @@ class Dashborad extends StatelessWidget {
                                     return Padding(
                                       padding: const EdgeInsets.all(5.0),
                                       child: Card(
-                                          elevation: 5,
+                                          elevation: 4,
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(5.0),

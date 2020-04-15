@@ -1,2 +1,1 @@
-const String API_URL = "http://192.168.0.101:5000/";
-
+const String API_URL = "https://amizone-app.herokuapp.com/";

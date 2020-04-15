@@ -1,4 +1,6 @@
+import 'package:amizone_clientapp/Remote/Models/Schedule.dart';
 import 'package:amizone_clientapp/UI/home/bloc/home_bloc.dart';
+import 'package:amizone_clientapp/UI/home/screens/SchedulePage/SchedulePage.dart';
 
 import 'package:amizone_clientapp/UI/home/screens/dashboard/Homedashboard.dart';
 import 'package:amizone_clientapp/auth/authbloc_bloc.dart';
@@ -34,13 +36,13 @@ class HomePage extends StatelessWidget {
                     onPressed: () => Navigator.of(context).push(
                       MaterialPageRoute(
                           builder: (context) =>
-                              Scaffold(
-                                body: Center(child: RaisedButton(
-                                  onPressed: () {
-                                    BlocProvider.of<AuthenticationBloc>(context).add(LoggedOut());
-                                    Navigator.of(context).pop();
-                                  },
-                                )))),
+                              Scaffold(body: Center(child: RaisedButton(
+                                onPressed: () {
+                                  BlocProvider.of<AuthenticationBloc>(context)
+                                      .add(LoggedOut());
+                                  Navigator.of(context).pop();
+                                },
+                              )))),
                     ),
                   ),
                 ],
@@ -51,7 +53,7 @@ class HomePage extends StatelessWidget {
                 controller: pageController,
                 children: [
                   Dashborad(),
-                  Scaffold(),
+                  SchedulePage(),
                   Scaffold(),
                 ],
               ),
@@ -68,11 +70,11 @@ class HomePage extends StatelessWidget {
                     title: Text("Home"),
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.calendar_today),
+                    icon: Icon(Icons.today),
                     title: Text("Schedule"),
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.assignment),
+                    icon: Icon(Icons.assignment_late),
                     title: Text("Assignments"),
                   ),
                 ],

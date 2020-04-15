@@ -1,7 +1,8 @@
-
+import 'package:amizone_clientapp/Remote/Models/Schedule.dart';
 import 'package:amizone_clientapp/Remote/Models/attendance.dart';
 import 'package:amizone_clientapp/Remote/Models/user.dart';
 import 'package:amizone_clientapp/Remote/api_manager.dart';
+
 
 class UserRepository {
   static final UserRepository instance = UserRepository._internal();
@@ -14,6 +15,7 @@ class UserRepository {
         () => ApiManager.instance.userService.getUser(userId));
     return User.fromJson(body);
   }
+
   /// Returns current user profile
   Future<User> getCurrentUser() async {
     final body = await ApiManager.callSafely(
@@ -33,4 +35,15 @@ class UserRepository {
     return tasks;
   }
 
+  Future<List<Schedule>> getSchedule() async {
+    final body = await ApiManager.callSafely(
+        () => ApiManager.instance.userService.getAllSchedule());
+    List<Schedule> tasks = [];
+
+    for (var user in body) {
+      tasks.add(Schedule.fromJson(user));
+    }
+
+    return tasks;
+  }
 }
