@@ -28,7 +28,7 @@ class ApiManager {
       }
       return response.body;
     } on SocketException {
-      throw Failure("No internet connection");
+      throw Failure("Server Unreachable");
     } on HttpException {
       throw Failure("HttpException");
     } on Exception catch (e) {

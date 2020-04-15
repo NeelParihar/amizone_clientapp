@@ -104,7 +104,7 @@ class _LoginFormState extends State<LoginForm> {
         );
         if (state is LoginFailure) {
           setState(() {
-            Future.delayed(Duration(seconds: 2)).then((value) {
+            Future.delayed(Duration(seconds: 3)).then((value) {
               pr.hide().whenComplete(() {
                 context.showSnackBar(state.message);
                 print(pr.isShowing());
@@ -114,7 +114,7 @@ class _LoginFormState extends State<LoginForm> {
         }
         if (state is LoginSuccess) {
           setState(() {
-            Future.delayed(Duration(seconds: 2)).then((value) {
+            Future.delayed(Duration(seconds: 3)).then((value) {
               pr.hide().whenComplete(() {
                 context.toast("Login successful");
                 print(pr.isShowing());
