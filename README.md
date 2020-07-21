@@ -6,8 +6,8 @@ This is the Flutter Frontend for the APP (The backend of the project is [Here](h
 - Developed API endpoints using flask, that will scrape the data from the amizone website and store it onto SQL database and depolyed it using Heroku. User can view Attendance , Timetable, etc. 
 
 ## Screenshots:
-<img src="screenshots/login.png" height="400" width="500" >
+<img src="login.png" height="400" width="500" >
 
-<img src="screenshots/home.png" height="400" width="500" >
+<img src="home.png" height="400" width="500" >
 
-<img src="screenshots/timetable.png" height="400" width="500" >
+<img src="timetable.png" height="400" width="500" >
