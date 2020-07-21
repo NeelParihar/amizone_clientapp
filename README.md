@@ -1,16 +1,13 @@
 # amizone_clientapp
+This is the Flutter Frontend for the APP (The backend of the project is [Here](https://github.com/NeelParihar/amizone-backend))
 
-A new Flutter project.
+- Amizone is a student portal for amity student's , for that I have developed a cross platform mobile app so the Students don't have to go to the website and repeatedly login to access necessary Data .
 
-## Getting Started
+- Developed API endpoints using flask, that will scrape the data from the amizone website and store it onto SQL database and depolyed it using Heroku. User can view Attendance , Timetable, etc. 
 
-This project is a starting point for a Flutter application.
+## Screenshots:
+<img src="screenshots/login.png" height="400" width="500" >
 
-A few resources to get you started if this is your first Flutter project:
+<img src="screenshots/home.png" height="400" width="500" >
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="screenshots/timetable.png" height="400" width="500" >
